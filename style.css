@@ -8,59 +8,100 @@
 }
 
 body {
-  background-color: rgb(13, 15, 46);
+  background-color: rgb(20, 23, 66);
 }
 
-/* nav begin */
-
-.nav-bar {
-  background-color: rgba(113, 170, 184, 0.384);
-  display: flex;
-  align-content: center;
-  align-items: center;
-}
-
-h1 {
+.logo,
+li,
+a,
+button {
   color: rgb(190, 214, 233);
-  font-weight: 1000;
-  font-size: x-large;
-  letter-spacing: 2px;
-  padding-left: 40px;
 }
 
-.info {
-  display: flex;
-  padding-left: 600px;
-}
-
-a {
-  color: rgb(190, 214, 233);
-  display: flex;
+li,
+a,
+button {
+  font-size: 18px;
   text-decoration: none;
-  padding: 25px;
 }
 
-a:hover {
-  font-weight: 1000;
-  border-top: 3px solid white;
-  transition: 0.2s;
-}
-
-/* nav end */
-
-/* content begin */
-
-.content {
-  color: rgb(190, 214, 233);
+header {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
-  align-content: center;
-  justify-content: center;
+  padding: 15px 10%;
+  background-image: linear-gradient(rgb(46, 54, 167), rgb(51, 56, 133));
 }
 
-.content h2 {
-  padding: 20px;
+.logo {
+  font-size: 25px;
+  cursor: pointer;
+  padding: 15px;
+  border: 2px solid rgb(190, 214, 233);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  transition: 0.3s;
 }
 
-/* content end */
+.logo:hover {
+  color: rgb(237, 243, 248);
+  border-color: rgb(237, 243, 248);
+  font-weight: 1000;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: 0.3s;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  flex: 1;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  font-weight: 1000;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 2px solid rgb(237, 243, 248);
+  border-right: 2px solid rgb(237, 243, 248);
+  transition: all 0.3s ease 0s;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgb(43, 45, 92);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  color: rgb(237, 243, 248);
+  font-weight: 1000;
+  background-color: rgba(106, 206, 231, 0.8);
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 400px) {
+  header {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+}
